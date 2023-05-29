@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+}
+li {
+	list-style: none;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+
+section {
+	padding: 1rem;
+}
+
+section:nth-child(odd) {
+	border: 1px solid;
+	border-radius: 1rem;
+}
+
+.article {
+	display: grid;
+	grid-template-columns: repeat(1fr);
+	padding: 1rem;
+}
+.input,
+.btn{
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    text-transform: uppercase;
+}
+.input{
+    background-color: #eee;
+}
+.input:focus{
+    outline: none;
+}
+.list__header,
+.list__results{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: .3rem;
+}
+.list__header.values{
+    border-bottom: .2rem solid;
+}
+
+
+.item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100%;
+    border-bottom: 1px solid gray;
+    padding: .3rem;
+}
+.item:nth-child(odd){
+    background: #eee;
+}
+
+.item__edit{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.edit, .delete{
+    color: #eee;
+    border-radius: .2rem;
+    padding: .2rem;
+    align-self: center;
+    font-size: 1.1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.edit:hover, .delete:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.edit{
+    background: orange;
+}
+.delete{
+    background: red;
+}

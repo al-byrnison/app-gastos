@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <article class="article">
+            <section class="badget__content">
+                <form action="" class="form">
+                    <label for="" class="label">Ingresa tu presupuesto</label>
+                    <input type="text" class="input" id="budget-input" placeholder="0">
+                    <button class="btn" id="btn-budget">Calcular</button>
+                </form>
+            </section>
+            <section class="values__content">
+                <ul class="list__header">
+                    <li class="header__title">Presupuesto</li>
+                    <li class="header__title">Gasto</li>
+                    <li class="header__title">Saldo</li>
+                </ul>
+                <ul class="list__results">
+                    <li class="list__item" id="badget"></li>
+                    <li class="list__item" id="expenses"></li>
+                    <li class="list__item" id="balance"></li>
+                </ul>
+            </section>
+            <section class="cost__content">
+                <form action="" class="form">
+                    <label for="" class="label">Ingresa el nombre del gasto</label>
+                    <input type="text" class="input" id="input-name">
+                    <label for="" class="label">Ingresa el valor del gasto</label>
+                    <input type="text" class="input" id="input-value">
+                    <button class="btn" id="btn-expense">Calcular</button>
+                </form>
+            </section>
+            <section class="values__content">
+                <ul class="list__header values">
+                    <li class="header__title">Gasto</li>
+                    <li class="header__title">Valor</li>
+                    <li class="header__title">Editar/Borrar</li>
+                </ul>
+                <ul class="list__values" id="item-values">
+                </ul>
+            </section>
+        </article>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

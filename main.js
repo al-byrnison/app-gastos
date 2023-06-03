@@ -114,7 +114,7 @@ function editItem(index) {
 	})
 }
 function deleteItem(index) {
-	itemList.splice(index)
+	itemList.splice(index, 1)
 	setItemList(itemList)
 	setResultsView()
 }

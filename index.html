@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <header class="header">
+        <h2>PRESUPUESTO APP</h2>
+
+            <button class="switch-mode" id="switch">
+                <span class="material-symbols-outlined">
+                    light_mode
+                </span>
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+
+    </header>
     <main class="container">
         <article class="article">
-            <section class="badget__content">
-                <form action="" class="form">
-                    <label for="" class="label">Ingresa tu presupuesto</label>
-                    <input type="text" class="input" id="budget-input" placeholder="0">
+            <section class="badget-content">
+                <form action="" class="form" id="budget-form">
+                    <div id="group-budget" class="group-input">
+                        <label for="" class="label">Ingresa tu presupuesto</label>
+                        <input type="text" class="input" id="budget-input" name="budget" placeholder="0" required>
+                        <small class="invalid-msg"></small>
+                    </div>
                     <button class="btn" id="btn-budget">Calcular</button>
                 </form>
             </section>
@@ -30,16 +49,26 @@
                     <li class="list__item" id="balance"></li>
                 </ul>
             </section>
-            <section class="cost__content">
-                <form action="" class="form">
-                    <label for="" class="label">Ingresa el nombre del gasto</label>
-                    <input type="text" class="input" id="input-name">
-                    <label for="" class="label">Ingresa el valor del gasto</label>
-                    <input type="text" class="input" id="input-value">
-                    <button class="btn" id="btn-expense">Calcular</button>
+        </article>
+        <article id="expenses-article" class="article">
+
+            <section class="cost-content">
+                <form action="" class="form" id="cost-form">
+                    <div id="group-name" class="group-input">
+                        <label for="" class="label">Ingresa el nombre del gasto</label>
+                        <input type="text" class="input" id="input-name" name="cost-name" placeholder="Gasto..."
+                            required>
+                        <small class="invalid-msg"></small>
+                    </div>
+                    <div id="group-cost" class="group-input">
+                        <label for="" class="label">Ingresa el valor del gasto</label>
+                        <input type="text" class="input" id="input-value" name="cost-value" placeholder="0" required>
+                        <small class="invalid-msg"></small>
+                    </div>
+                    <button class="btn" id="btn-expense">Añadir Gasto</button>
                 </form>
             </section>
-            <section class="values__content">
+            <section class="values-content">
                 <ul class="list__header values">
                     <li class="header__title">Gasto</li>
                     <li class="header__title">Valor</li>
@@ -51,5 +80,7 @@
         </article>
     </main>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
